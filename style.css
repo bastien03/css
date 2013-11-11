@@ -1,0 +1,24 @@
+li {
+	font-style: italic;
+	border: 1px solid black;
+	width: 7%;
+	height: 20px;
+	background-color: black;
+	list-style-type: none;
+	margin: 5px;
+	float:left;
+}
+
+li:nth-child(10n+1) {
+	clear: left;
+}
+
+li:nth-child(3n+1) {
+	background-color: green;
+	margin: 0px;
+}
+
+li:last-child {
+	background-color: red;
+	border-color: red;
+}

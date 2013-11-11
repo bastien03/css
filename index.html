@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript">
+			function render() {
+				nbItems = document.getElementById('nbItems').value;
+				items = buildItems(nbItems);
+				document.getElementById('list').innerHTML=items;
+			}
+
+			function buildItems(nbItems) {
+				items = "";
+				for(var i = 0; i<nbItems; i++) {
+					items += "<li> </li>";
+				}
+
+				return items;
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<form onsubmit="render(); return false;">
+			<input type="text" id="nbItems" autofocus="autofocus"/>
+			<input type="Submit" value="Render!"/>
+		</form>
+
+		<ul id="list"/>
+
+	</body>
+</html>
